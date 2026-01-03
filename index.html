@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!--
+  Natural Coffee – Landing Page
+
+  Single-page café website built with HTML, CSS and vanilla JS.
+
+  Features:
+  - Responsive design
+  - Smooth scrolling
+  - Simple animations
+  - Optimized images
+  - Accessible structure
+-->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Natural Coffee — Portfolio</title>
+  <!-- SEO basics -->
+  <meta name="description" content="A cozy café portfolio with natural coffee beans, menu, about us, and reviews. Smooth navigation and WhatsApp contact." />
+  <meta name="author" content="Fabian — FV.WebStudio" />
+
+  <!-- Open Graph for richer shares -->
+  <meta property="og:title" content="Natural Coffee — Portfolio" />
+  <meta property="og:description" content="Discover our natural coffee, cozy vibes, and customer reviews. Contact us via WhatsApp." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/hero-coffee.jpg" />
+  <meta property="og:url" content="instagram.com/naturalcoffee.demo"/>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CafeOrCoffeeShop",
+  "name": "Natural Coffee",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "San José",
+    "addressCountry": "CR"
+  },
+  "servesCuisine": "Coffee",
+  "priceRange": "$$",
+  "sameAs": [
+    "https://instagram.com/your-handle",
+    "https://facebook.com/your-page"
+  ]
+}
+</script>
+
+  <!-- Favicon -->
+  <link rel="icon" href="assets/favicon.ico" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Playfair+Display:wght@600;700&display=swap"
+    rel="stylesheet"/>
+
+  <!-- Main stylesheet -->
+   <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!--
+    Skip link for accessibility so keyboard users
+  -->
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" role="banner" aria-label="Top navigation">
+    <div class="container header-inner">
+      <!-- Logo area: "Natural 100%" -->
+      <a class="brand" href="#hero" aria-label="Go to top">
+        <span class="brand-badge">NATURAL</span>
+        <span class="brand-100">100%</span>
+      </a>
+
+      <!-- Primary navigation -->
+      <nav class="primary-nav" aria-label="Primary">
+        <ul class="nav-list">
+          <li>
+            <button class="nav-link" data-scroll-to="#menu" aria-controls="menu" aria-label="Go to menu section">
+              Menu
+            </button>
+          </li>
+          <li>
+            <button class="nav-link" data-scroll-to="#about" aria-controls="about" aria-label="Go to about us section">
+              About Us.
+            </button>
+          </li>
+          <li>
+            <button class="nav-link" data-scroll-to="#reviews" aria-controls="reviews" aria-label="Go to reviews section">
+              Reviews
+            </button>
+          </li>
+        </ul>
+      </nav>
+      <button id="themeToggle" class="nav-link" aria-label="Toggle dark mode">
+  Dark mode
+</button>
+
+    </div>
+  </header>
+
+  <!-- Hero section: left side cappuccino; right -->
+  <section id="hero" class="hero" aria-label="Hero with coffee and natural beans">
+  <div class="container hero-grid">
+
+    <!-- LEFT -->
+    <div class="hero-left">
+      <img
+        src="assets/hero-coffee.jpg"
+        alt="Coffee cup background"
+        class="hero-image"
+      />
+
+      <div class="hero-copy">
+        <h1 class="hero-title">The most delicious coffees</h1>
+
+        <p class="hero-subtitle">
+          Always with us. Carefully crafted cups, brewed in a cozy and welcoming atmosphere.
+        </p>
+
+        <ul class="hero-ingredients">
+          <li>100% Arabica beans</li>
+          <li>Fresh organic milk</li>
+          <li>Natural cocoa & vanilla notes</li>
+          <li>No artificial flavors</li>
+          <li>Slow-roasted perfection</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- RIGHT -->
+    <div class="hero-right">
+      <div class="hero-info">
+        <p class="hero-kicker">Trusted by locals</p>
+
+        <ul class="hero-stats">
+          <li><strong>4.9★</strong> Google Reviews</li>
+          <li><strong>10k+</strong> Cups served</li>
+          <li><strong>5 yrs</strong> Craft roasting</li>
+        </ul>
+
+        <a href="#menu" class="hero-cta alt">View Menu</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="section cta-section reveal">
+  <div class="container cta-box">
+    <h2>Ready to taste the difference?</h2>
+    <p>Contact us today or place your order directly on WhatsApp.</p>
+    <a href="https://wa.me/50670000000" class="hero-cta">
+      Order now
+    </a>
+  </div>
+</section>
+
+  <!-- Main content wrapper -->
+<div class="coffee-wave"></div>
+<section class="section value-prop reveal">
+  <div class="container">
+    <header class="section-header">
+      <h2 class="section-title">Why choose Natural Coffee?</h2>
+      <p class="section-desc">
+        We don’t just serve coffee — we craft experiences.
+      </p>
+    </header>
+
+    <div class="value-grid">
+      <div class="value-card">
+        <h3>🌱 Premium Ingredients</h3>
+        <p>Only ethically sourced Arabica beans, slow roasted for maximum flavor.</p>
+      </div>
+      <div class="value-card">
+        <h3>🏆 Trusted Quality</h3>
+        <p>Thousands of happy customers and a 4.9★ rating across platforms.</p>
+      </div>
+      <div class="value-card">
+        <h3>⚡ Fast & Friendly</h3>
+        <p>Quick service without sacrificing warmth, care, or quality.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<main id="main" class="main" role="main">
+
+    <!-- Menu section: two rows -->
+    <section id="menu" class="section menu-section reveal alt"> 
+      <div class="container">
+        <header class="section-header">
+          <h2 class="section-title">Menu</h2>
+          <p class="section-desc">Explore our selection. Tap a card to reveal details and pricing.</p>
+        </header>
+
+        <div class="menu-grid" role="list">
+          <!-- Six placeholder menu cards -->
+         <article class="menu-card reveal" role="listitem" tabindex="0" aria-label="Cappuccino">
+          <span class="price-ribbon">$3.80</span>
+            <div class="menu-card-inner">
+              <div class="menu-img-wrap">
+                <img 
+  src="assets/menu-cappuccino.jpg" 
+  alt="Cappuccino coffee" 
+  class="menu-img"
+/>
+              </div>
+              <h3 class="menu-item-title">Cappuccino</h3>
+              <p class="menu-item-desc">Rich espresso, steamed milk, velvety foam.</p>
+              <button class="menu-item-cta" data-item="Cappuccino">
+  See details →
+</button>
+
+            </div>
+          </article>
+
+          <article class="menu-card reveal" role="listitem" tabindex="0" aria-label="Latte">
+            <span class="price-ribbon">$3.90</span>
+            <div class="menu-card-inner">
+              <div class="menu-img-wrap">
+              <img src="assets/menu-latte.jpg" class="menu-img">
+              </div>
+              <h3 class="menu-item-title">Latte</h3>
+              <p class="menu-item-desc">Smooth, creamy, with subtle espresso notes.</p>
+              <button class="menu-item-cta" data-item="Latte">
+                See details →
+                </button>
+            </div>
+          </article>
+
+          <article class="menu-card reveal" role="listitem" tabindex="0" aria-label="Espresso">
+            <span class="price-ribbon">$2.20</span>
+            <div class="menu-card-inner">
+              <div class="menu-img-wrap">
+              <img src="assets/menu-espresso.jpg" class="menu-img">
+              </div>
+              <h3 class="menu-item-title">Espresso</h3>
+              <p class="menu-item-desc">Bold shot to kickstart your day.</p>
+              <button class="menu-item-cta" data-item="Espresso">
+                See details →
+                </button>
+            </div>
+          </article>
+
+         <article class="menu-card reveal" role="listitem" tabindex="0" aria-label="Mocha">
+          <span class="price-ribbon">$4.20</span>
+            <div class="menu-card-inner">
+              <div class="menu-img-wrap">
+              <img src="assets/menu-mocha.jpg" class="menu-img">
+              </div>
+              <h3 class="menu-item-title">Mocha</h3>
+              <p class="menu-item-desc">Chocolate meets espresso — indulgent and balanced.</p>
+              <button class="menu-item-cta" data-item="Mocha">
+                See details →
+                </button>
+            </div>
+          </article>
+
+         <article class="menu-card reveal" role="listitem" tabindex="0" aria-label="Americano">
+          <span class="price-ribbon">$2.50</span>
+            <div class="menu-card-inner">
+              <div class="menu-img-wrap">
+              <img src="assets/menu-americano.jpg" class="menu-img">
+              </div>
+              <h3 class="menu-item-title">Americano</h3>
+              <p class="menu-item-desc">Espresso with hot water — clean and crisp.</p>
+              <button class="menu-item-cta" data-item="Americano">
+                See details →
+                </button>
+            </div>
+          </article>
+
+          <article class="menu-card reveal" role="listitem" tabindex="0" aria-label="Flat White">
+            <span class="price-ribbon">$4.00</span>
+            <div class="menu-card-inner">
+              <div class="menu-img-wrap">
+              <img src="assets/menu-flatwhite.jpg" class="menu-img">
+</div>
+              <h3 class="menu-item-title">Flat White</h3>
+              <p class="menu-item-desc">Velvety microfoam and balanced espresso.</p>
+              <button class="menu-item-cta" data-item="Flat White">
+              See details →
+              </button>
+            </div>
+          </article>
+        </div>
+
+        <!-- Optional: a lightweight modal drawer for menu details -->
+        <dialog class="menu-dialog" aria-label="Menu item details">
+          <div class="dialog-content">
+            <button class="dialog-close" aria-label="Close details">×</button>
+            <h3 class="dialog-title">Item name</h3>
+            <p class="dialog-body">
+              Detailed description, ingredients, roast notes, and serving suggestions.
+            </p>
+            <p class="dialog-price">$3.50</p>
+          </div>
+        </dialog>
+      </div>
+    </section>
+<div class="coffee-wave"></div>
+
+    <!-- About us with social row and embedded random location map -->
+    <section id="about" class="section about-section" aria-label="About us and location">
+      <div class="container about-grid">
+        <!-- Left: About text and social links -->
+        <div class="about-left">
+          <header class="section-header">
+            <h2 class="section-title">About Us</h2>
+          </header>
+
+          <div class="about-card">
+            <p>
+              We celebrate the craft of coffee — ethically sourced beans, carefully roasted, and brewed with love.
+              Our space invites slow moments, warm conversations, and quality in every cup.
+            </p>
+            <p>
+              From cappuccinos to mochas, our menu blends tradition and playful experimentation.
+              Your perfect cup is waiting — natural, balanced, and delicious.
+            </p>
+            <ul class="about-facts">
+  <li>☕ 5 coffee shops nationwide</li>
+  <li>💳 Visa, MasterCard & Apple Pay</li>
+  <li>🌱 Ethically sourced beans</li>
+  <li>📍 Local roasting since 2020</li>
+</ul>
+
+          </div>
+
+          <!-- Socials row to mirror "Instagram  Facebook  Tiktok" -->
+          <ul class="social-row" aria-label="Social media links">
+            <li><a href="https://instagram.com/your-handle" target="_blank" rel="noopener" aria-label="Instagram">Instagram</a></li>
+            <li><a href="https://facebook.com/your-page" target="_blank" rel="noopener" aria-label="Facebook">Facebook</a></li>
+            <li><a href="https://tiktok.com/@your-handle" target="_blank" rel="noopener" aria-label="TikTok">TikTok</a></li>
+          </ul>
+        </div>
+
+        <!-- Right: Address heading, stylized map, and sample address line -->
+        <div class="about-right">
+  <h3 class="map-title">Address.</h3>
+<div class="open-status" aria-live="polite">
+  <span class="status-dot"></span>
+  <span class="status-text">Open now</span>
+  <span class="status-hours">• Closes at 7:00 PM</span>
+</div>
+
+  <!-- Map + Image side by side -->
+  <div class="location-pair">
+
+    <!-- MAP -->
+    <div class="map-frame">
+      <div class="map-embed">
+        <iframe
+          title="Map to a café location"
+          src="https://www.google.com/maps?q=742+Evergreen+Ave+Brooklyn+NY+11221&output=embed"
+          width="100%"
+          height="320"
+          style="border:0;"
+          allowfullscreen
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </div>
+
+    <!-- AI IMAGE -->
+    <div class="location-image">
+      <img
+        src="assets/coffee-shop-exterior.webp"
+        alt="Exterior view of our coffee shop"
+        loading="lazy"
+      />
+    </div>
+
+  </div>
+          
+          <!-- Mimics "50mts n ................................." -->
+          <p class="address-line">
+            50mts n cozy corner, downtown...
+          </p>
+        </div>
+      </div>
+    </section>
+</section>
+
+<div class="coffee-wave"></div>
+<section class="section services reveal alt">
+  <div class="container">
+    <header class="section-header">
+      <h2 class="section-title">Our Services</h2>
+    </header>
+
+    <div class="value-grid">
+      <div class="value-card">☕ On-site coffee service</div>
+      <div class="value-card">📦 Takeaway & delivery</div>
+      <div class="value-card">🎉 Events & catering</div>
+    </div>
+  </div>
+</section>
+<section class="section trust reveal">
+  <div class="container">
+    <p class="section-desc">
+      Trusted by creatives, locals, and growing businesses.
+    </p>
+  </div>
+</section>
+<section id="reviews" class="section reviews-section reveal alt">
+
+    <!-- Reviews section with two testimonial cards -->
+      <div class="container">
+        <header class="section-header">
+          <h2 class="section-title">Reviews</h2>
+          <p class="section-desc">What our customers say about our coffee, atmosphere, and attention to detail.</p>
+        </header>
+
+        <div class="reviews-grid" role="list">
+          <!-- Review 1 -->
+          <article class="review-card" role="listitem">
+            <div class="review-avatar">
+  <img 
+    src="assets/reviewer-alex.webp" 
+    alt="Portrait of Alex M."
+  />
+</div>
+
+            <div class="review-content">
+              <div class="review-stars" aria-label="5 star rating">
+                ★★★★★
+              </div>
+              <blockquote class="review-quote">
+               “Hands down the best cappuccino I’ve had in years. Smooth, aromatic, and perfectly balanced.”
+              </blockquote>
+              <div class="review-author">– Alex M., Daily Customer</div>
+            </div>
+          </article>
+
+          <!-- Review 2 -->
+          <article class="review-card" role="listitem">
+           <div class="review-avatar">
+  <img 
+    src="assets/reviewer-sarah.jpg" 
+    alt="Portrait of Sarah L."
+  />
+</div>
+
+            <div class="review-content">
+              <div class="review-stars" aria-label="5 star rating">
+                ★★★★★
+              </div>
+              <blockquote class="review-quote">
+                “A cozy place with incredible attention to detail. Their flat white is simply perfect.”
+              </blockquote>
+             <div class="review-author">– Sarah L., Coffee Lover</div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Floating WhatsApp button always visible at bottom-right.-->
+  <a
+  href="https://wa.me/50670000000"
+  class="whatsapp-float"
+  target="_blank"
+  aria-label="Chat with us on WhatsApp"
+>
+  <span class="wa-icon">💬</span>
+  <span class="wa-text">Chat with us</span>
+</a>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+  <nav class="footer-nav">
+    <a href="#menu">Menu</a>
+    <a href="#about">About</a>
+    <a href="#reviews">Reviews</a>
+  </nav>
+  <p>© 2026 Natural Coffee — Designed by FV.WebStudio</p>
+</footer>
+  </div>
+</footer>
+<script src="main.js" defer></script>
+</body>
+</html>
