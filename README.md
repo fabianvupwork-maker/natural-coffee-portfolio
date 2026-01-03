@@ -12,7 +12,7 @@ The focus is on clean design, responsiveness and good performance, especially on
 - Reviews section
 - Optimized images
 - WhatsApp contact button
-
+ 
 ## Technologies used
 - HTML
 - CSS
