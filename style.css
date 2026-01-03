@@ -59,6 +59,11 @@ body {
   background: var(--clr-bg);
   line-height: 1.6;
 }
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 
 img,
 svg {
@@ -113,6 +118,7 @@ a:hover {
   align-items: center;
   justify-content: space-between;
   padding: var(--space-4) 0;
+  flex-wrap: wrap;
 }
 
 .brand {
@@ -209,8 +215,17 @@ a:hover {
 .hero-title {
   font-family: var(--font-serif);
   font-size: clamp(32px, 5vw, 52px);
-  margin: 0 0 var(--space-3);
+  margin: 0 0 var(--space-3) 
+
 }
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 2.2rem;
+    line-height: 1.15;
+    word-break: break-word;
+  }
+}
+
 .hero-subtitle {
   margin: 0 0 var(--space-4);
   color: #f5f2ef;
@@ -876,7 +891,7 @@ body.dark {
   opacity: 0.9;
   margin-bottom: 24px;
 }
-/* ===== MENU PRICE RIBBON ===== */
+/* Menu price badge */
 
 .menu-card {
   position: relative;
@@ -900,7 +915,7 @@ body.dark {
   transform: translateX(-6px);
   transition: transform 0.3s ease;
 }
-/* ===== ABOUT LOCATION MAP + IMAGE ===== */
+
 @media (max-width: 768px) {
   .location-pair {
     grid-template-columns: 1fr;
@@ -910,7 +925,7 @@ body.dark {
     height: 260px;
   }
 }
-/* ===== OPEN NOW STATUS ===== */
+/* Open status indicator */
 
 .open-status {
   display: flex;
@@ -976,6 +991,25 @@ button:focus-visible,
 a:focus-visible {
   outline: 3px solid var(--clr-accent);
   outline-offset: 3px;
+}
+@media (max-width: 768px) {
+  .hero-copy {
+    left: 16px;
+    right: 16px;
+    bottom: 20px;
+    max-width: 100%;
+  }
+}
+@media (max-width: 480px) {
+  .whatsapp-float {
+    right: 16px;
+    bottom: 16px;
+    padding: 14px;
+  }
+
+  .wa-text {
+    display: none;
+  }
 }
 
 
