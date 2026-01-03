@@ -1,0 +1,25 @@
+# Natural Coffee – Website
+
+This is a simple coffee shop website built with HTML, CSS and JavaScript.
+
+I made this project to practice front-end development and to use it as a portfolio example.  
+The focus is on clean design, responsiveness and good performance, especially on mobile devices.
+
+## What this project includes
+- Responsive layout
+- Menu section with prices
+- About section with a map
+- Reviews section
+- Optimized images
+- WhatsApp contact button
+
+## Technologies used
+- HTML
+- CSS
+- JavaScript
+
+## Live version
+https://natural-coffee-portfolio.netlify.app/
+
+## Author
+Built by FV.WebStudio
