@@ -18,8 +18,8 @@ The focus is on clean design, responsiveness and good performance, especially on
 - CSS
 - JavaScript
 
-## Live version
-https://natural-coffee-portfolio.netlify.app/
+## Restaurant website
+https://restaurant-website-portfolio.netlify.app/
 
 ## Shopify clothes website concep
 https://5z1pwe-zj.myshopify.com/
