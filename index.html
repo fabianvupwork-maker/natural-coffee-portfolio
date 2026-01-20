@@ -1,18 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!--
-  Natural Coffee – Landing Page
-
-  Single-page café website built with HTML, CSS and vanilla JS.
-
-  Features:
-  - Responsive design
-  - Smooth scrolling
-  - Simple animations
-  - Optimized images
-  - Accessible structure
+ <!--
+  Natural Coffee website
 -->
+
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
@@ -106,11 +98,15 @@
 
     <!-- LEFT -->
     <div class="hero-left">
-      <img
-        src="assets/hero-coffee.jpg"
-        alt="Coffee cup background"
-        class="hero-image"
-      />
+      <video
+  class="hero-video"
+  src="assets/intro-cafe.mp4"
+  autoplay
+  muted
+  loop
+  playsinline
+></video>
+
 
       <div class="hero-copy">
         <h1 class="hero-title">The most delicious coffees</h1>
@@ -287,7 +283,7 @@
           </article>
         </div>
 
-        <!-- Optional: a lightweight modal drawer for menu details -->
+      
         <dialog class="menu-dialog" aria-label="Menu item details">
           <div class="dialog-content">
             <button class="dialog-close" aria-label="Close details">×</button>
@@ -376,7 +372,7 @@
 
   </div>
           
-          <!-- Mimics "50mts n ................................." -->
+          <!-- Mimics "50mts n ...." -->
           <p class="address-line">
             50mts n cozy corner, downtown...
           </p>
@@ -430,7 +426,7 @@
                 ★★★★★
               </div>
               <blockquote class="review-quote">
-               “Hands down the best cappuccino I’ve had in years. Smooth, aromatic, and perfectly balanced.”
+              “Probably the best cappuccino I’ve had in a long time. Really smooth and well balanced.”
               </blockquote>
               <div class="review-author">– Alex M., Daily Customer</div>
             </div>

@@ -203,6 +203,13 @@ img[loading="lazy"] {
   align-items: stretch;
 }
 
+@media (min-width: 1025px) {
+  .hero-grid {
+    grid-template-columns: 1.6fr 0.6fr;
+  }
+}
+
+
 /* Left Column (Image & Copy) */
 .hero-left {
   position: relative;
@@ -231,6 +238,17 @@ img[loading="lazy"] {
   transform: scale(1.12);
   transition: transform 6s ease;
 }
+
+.hero-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  transform: scale(1.12);
+}
+
 
 .hero:hover .hero-image {
   transform: scale(1.18);
@@ -325,6 +343,13 @@ img[loading="lazy"] {
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-md);
 }
+
+@media (min-width: 1025px) {
+  .hero-right {
+    padding-left: var(--space-6);
+  }
+}
+
 
 .natural-badge {
   display: inline-flex;

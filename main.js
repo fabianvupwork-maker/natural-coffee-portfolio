@@ -1,9 +1,3 @@
- /**
- * Script for Natural Coffee Portfolio
- * - Smooth scroll via header buttons
- * - Menu item detail dialog
- * - Accessibility-focused interactions
- */
 
 document.addEventListener("DOMContentLoaded", () => {
   // Scroll reveal animations
@@ -175,23 +169,6 @@ window.addEventListener("scroll", () => {
         `https://wa.me/50670000000?text=Hola,%20quiero%20ordenar%20un%20${encodeURIComponent(item)}`;
     });
   });
-  // Subtle hero parallax effect
-  const hero = document.querySelector(".hero-left");
-  const heroImg = document.querySelector(".hero-image");
-
-  if (hero && heroImg) {
-    hero.addEventListener("mousemove", e => {
-      const x = (e.offsetX / hero.offsetWidth - 0.5) * 6;
-      const y = (e.offsetY / hero.offsetHeight - 0.5) * 6;
-
-      heroImg.style.transform =
-        `scale(1.1) translate(${x}px, ${y}px)`;
-    });
-
-    hero.addEventListener("mouseleave", () => {
-      heroImg.style.transform = "scale(1.1)";
-    });
-  }
 
 });
 // ===== OPEN / CLOSED STATUS =====
