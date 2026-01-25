@@ -1,39 +1,33 @@
 
-/* ------------------------- */
-/* 1. CONFIG & TOKENS        */
-/* ------------------------- */
 :root {
-  /* Brand palette */
-  --clr-bg: #faf6f0;
-  --clr-bg-soft: #f5efe8;
-  --clr-surface: #ffffff;
-  --clr-text: #2f2a25;
-  --clr-muted: #6f635a;
-  --clr-accent: #a05a2c;     /* warm coffee-brown */
-  --clr-accent-2: #cf8b4c;   /* lighter accent */
-  --clr-success: #25d366;    /* WhatsApp green */
+  --clr-bg: #F9F7F2;        
+  --clr-bg-soft: #EDE6D6;    
+  --clr-surface: #FFFFFF;     
+  --clr-text: #2C2420;        
+  --clr-muted: #6D5F55;       
+  --clr-accent: #B05E27;      
+  --clr-accent-2: #8C4A1D;    
+  --clr-success: #25D366;     
+  --clr-border: #E6DCD3;     
 
   /* Utility */
-  --radius-lg: 24px;
-  --radius-md: 14px;
-  --radius-sm: 10px;
-
-  --shadow-sm: 0 2px 10px rgba(0,0,0,0.08);
-  --shadow-md: 0 10px 25px rgba(0,0,0,0.12);
-
-  --container-w: 1100px;
+  --radius-lg: 16px;          
+  --radius-md: 12px;
+  --radius-sm: 8px;
+  --shadow-sm: 0 4px 12px rgba(44, 36, 32, 0.05);
+  --shadow-md: 0 12px 32px rgba(44, 36, 32, 0.08);
+  --container-w: 1140px;
 
   /* Typography */
-  --font-sans: "Poppins", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-  --font-serif: "Playfair Display", Georgia, serif;
+  --font-sans: "Poppins", sans-serif;
+  --font-serif: "Playfair Display", serif;
 
-  /* Spacing scale */
+  /* Spacing */
   --space-2: 8px;
   --space-3: 12px;
   --space-4: 16px;
   --space-5: 20px;
   --space-6: 24px;
-  --space-7: 28px;
   --space-8: 32px;
   --space-10: 40px;
   --space-12: 48px;
@@ -41,15 +35,16 @@
   --space-20: 80px;
 }
 
+/* Modo Oscuro Ajustado */
 body.dark {
-  --clr-bg: #1e1712;
-  --clr-bg-soft: #261d17;
-  --clr-surface: #2d231c;
-  --clr-text: #f5efe8;
-  --clr-muted: #cbb8a7;
-  --clr-accent: #cf8b4c;
+  --clr-bg: #1A1614;
+  --clr-bg-soft: #241E1B;
+  --clr-surface: #2C2420;
+  --clr-text: #EFEBE5;
+  --clr-muted: #B0A69E;
+  --clr-accent: #CD7F4E;
+  --clr-border: #3D322C;
 }
-
 /* ------------------------- */
 /* 2. RESET & BASE           */
 /* ------------------------- */
@@ -485,9 +480,9 @@ img[loading="lazy"] {
   background: var(--clr-surface);
   border-radius: 28px;
   box-shadow: var(--shadow-md);
-  min-height: 160px;
-  display: grid;
-  place-items: center;
+  display: flex;           
+  flex-direction: column;   
+  height: 100%;           
   transition: transform 160ms ease, box-shadow 160ms ease;
 }
 
@@ -538,7 +533,7 @@ img[loading="lazy"] {
   text-align: center;
   display: flex;
   flex-direction: column;
-  height: 100%;
+  flex: 1; 
 }
 
 /* Menu Images */
@@ -1007,4 +1002,28 @@ img[loading="lazy"] {
   }
 }
 
+.menu-category-title {
+  font-family: var(--font-serif);
+  font-size: 28px;
+  color: var(--clr-accent);
+  margin-bottom: var(--space-6);
+  border-left: 4px solid var(--clr-accent-2);
+  padding-left: 16px;
+}
 
+.menu-item-cta {
+  width: 100%; 
+  text-align: center;
+  margin-top: 16px;
+  padding: 12px;
+  background-color: transparent;
+  border: 2px solid var(--clr-accent);
+  color: var(--clr-accent);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.menu-item-cta:hover {
+  background-color: var(--clr-accent);
+  color: #fff;
+}

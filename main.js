@@ -41,7 +41,7 @@ window.addEventListener("scroll", () => {
     revealObserver.observe(el);
   });
 
-  // Smooth scroll: buttons with data-scroll-to="#id" navigate to section
+  // Smooth scroll
   const navButtons = document.querySelectorAll(".nav-link[data-scroll-to]");
   navButtons.forEach((btn) => {
     btn.addEventListener("click", () => {
@@ -63,7 +63,7 @@ window.addEventListener("scroll", () => {
     });
   });
 
-  // Dialog for menu details (lightweight and optional)
+  // Dialog for menu details 
   const dialog = document.querySelector(".menu-dialog");
   const dialogTitle = dialog?.querySelector(".dialog-title");
   const dialogBody = dialog?.querySelector(".dialog-body");
@@ -104,29 +104,23 @@ window.addEventListener("scroll", () => {
     },
   };
 
-  // Open dialog when clicking "View details"
-  const ctas = document.querySelectorAll(".menu-item-cta");
-  ctas.forEach((cta) => {
-    cta.addEventListener("click", () => {
-      const key = cta.getAttribute("data-item");
-      const data = itemContent[key] || {
-        desc:
-          "Detailed description for this item will appear here. Customize to match your actual menu.",
-        price: "$3.50",
-      };
+  // =========================================
+  // WHATSAPP DIRECT ORDERING
+  // =========================================
+  const orderButtons = document.querySelectorAll(".menu-item-cta");
+  const basePhoneNumber = "50688403178"; 
 
-      if (!dialog) return;
-
-      dialogTitle.textContent = key || "Item";
-      dialogBody.textContent = data.desc;
-      dialogPrice.textContent = data.price;
-
-      if (typeof dialog.showModal === "function") {
-        dialog.showModal();
-      } else {
-        // Fallback if dialog API unsupported
-        dialog.setAttribute("open", "");
-      }
+  orderButtons.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const item = btn.getAttribute("data-item");
+      
+      const message = `Hello! I would like to order a *${item}*. Please confirm details.`;
+      
+     
+      const waLink = `https://wa.me/${basePhoneNumber}?text=${encodeURIComponent(message)}`;
+      
+      
+      window.open(waLink, "_blank");
     });
   });
 
@@ -139,7 +133,7 @@ window.addEventListener("scroll", () => {
     }
   });
 
-  // Close dialog when clicking backdrop area (ESC handled by browser)
+
   dialog?.addEventListener("click", (ev) => {
     const rect = dialog.querySelector(".dialog-content")?.getBoundingClientRect();
     if (!rect) return;
@@ -157,7 +151,7 @@ window.addEventListener("scroll", () => {
       }
     }
   });
-    // Dynamic WhatsApp message based on menu item
+   
   const whatsappBtn = document.querySelector(".whatsapp-float");
 
   document.querySelectorAll(".menu-item-cta").forEach(btn => {
