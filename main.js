@@ -104,65 +104,99 @@ window.addEventListener("scroll", () => {
     },
   };
 
-  // =========================================
-  // WHATSAPP DIRECT ORDERING
-  // =========================================
-  const orderButtons = document.querySelectorAll(".menu-item-cta");
-  const basePhoneNumber = "50688403178"; 
+  // LÓGICA DEL CARRITO 
+  
+  let cart = []; 
+  const myPhoneNumber = "50688403178"; 
 
-  orderButtons.forEach((btn) => {
+  const cartBtn = document.getElementById("cart-btn");
+  const cartCountDOM = document.getElementById("cart-count");
+  const addButtons = document.querySelectorAll(".menu-item-cta");
+
+  
+  function updateCartUI() {
+    cartCountDOM.textContent = cart.length;
+    
+    
+    cartCountDOM.classList.add("bump");
+    setTimeout(() => {
+      cartCountDOM.classList.remove("bump");
+    }, 300);
+  }
+
+  addButtons.forEach((btn) => {
     btn.addEventListener("click", () => {
       const item = btn.getAttribute("data-item");
       
-      const message = `Hello! I would like to order a *${item}*. Please confirm details.`;
+    
+      cart.push(item);
+    
+      updateCartUI();
+
+      const originalText = btn.innerText;
+      btn.innerText = "¡Añadido! ✔";
+      btn.style.backgroundColor = "var(--clr-muted)";
+      btn.style.color = "#fff";
       
-     
-      const waLink = `https://wa.me/${basePhoneNumber}?text=${encodeURIComponent(message)}`;
-      
-      
-      window.open(waLink, "_blank");
+      setTimeout(() => {
+        btn.innerText = originalText;
+        btn.style.backgroundColor = ""; 
+        btn.style.color = "";
+      }, 1000);
     });
   });
 
-  // Close dialog
-  dialogClose?.addEventListener("click", () => {
-    if (typeof dialog.close === "function") {
-      dialog.close();
-    } else {
-      dialog.removeAttribute("open");
+  // 5. Enviar el pedido completo a WhatsApp
+  cartBtn.addEventListener("click", () => {
+    if (cart.length === 0) {
+      alert("Tu pedido está vacío. ¡Añade algo delicioso del menú primero!");
+      return;
     }
+
+    const counts = {};
+    cart.forEach((x) => { counts[x] = (counts[x] || 0) + 1; });
+
+    let message = "Hola! 👋 Me gustaría hacer el siguiente pedido:\n\n";
+    
+    for (const [product, quantity] of Object.entries(counts)) {
+      message += `▪️ *${quantity}x* ${product}\n`;
+    }
+
+    message += "\n¿Me confirman el total? Gracias.";
+
+
+    const waLink = `https://wa.me/${myPhoneNumber}?text=${encodeURIComponent(message)}`;
+    window.open(waLink, "_blank");
   });
 
 
-  dialog?.addEventListener("click", (ev) => {
-    const rect = dialog.querySelector(".dialog-content")?.getBoundingClientRect();
-    if (!rect) return;
-    const clickedInContent =
-      ev.clientX >= rect.left &&
-      ev.clientX <= rect.right &&
-      ev.clientY >= rect.top &&
-      ev.clientY <= rect.bottom;
+const clearBtn = document.getElementById("clear-cart-btn"); 
 
-    if (!clickedInContent) {
-      if (typeof dialog.close === "function") {
-        dialog.close();
-      } else {
-        dialog.removeAttribute("open");
-      }
-    }
-  });
+  function updateCartUI() {
+    cartCountDOM.textContent = cart.length;
+    
    
-  const whatsappBtn = document.querySelector(".whatsapp-float");
+    cartCountDOM.classList.add("bump");
+    setTimeout(() => cartCountDOM.classList.remove("bump"), 300);
 
-  document.querySelectorAll(".menu-item-cta").forEach(btn => {
-    btn.addEventListener("click", () => {
-      const item = btn.dataset.item;
-      if (!item || !whatsappBtn) return;
+    if (cart.length > 0) {
+      clearBtn.style.display = "flex"; 
+    } else {
+      clearBtn.style.display = "none"; 
+    }
+  }
 
-      whatsappBtn.href =
-        `https://wa.me/50670000000?text=Hola,%20quiero%20ordenar%20un%20${encodeURIComponent(item)}`;
-    });
+  clearBtn.addEventListener("click", () => {
+    if(confirm("¿Quieres vaciar tu pedido?")) {
+      cart = []; 
+      updateCartUI(); 
+    }
   });
+
+
+
+
+
 
 });
 // ===== OPEN / CLOSED STATUS =====
@@ -186,6 +220,3 @@ if (statusText && statusDot) {
     statusDot.style.background = "#e74c3c";
   }
 }
-
-
-

@@ -202,7 +202,9 @@
           </div>
           <h3 class="menu-item-title">Classic Cappuccino</h3>
           <p class="menu-item-desc">A perfect third: rich espresso, steamed milk, and velvety foam. Finished with cocoa dust.</p>
-          <button class="menu-item-cta" data-item="Cappuccino">Order on WhatsApp →</button>
+          <button class="menu-item-cta" data-item="Classic Cappuccino">
+   Add order +
+</button>
         </div>
       </article>
 
@@ -214,7 +216,7 @@
           </div>
           <h3 class="menu-item-title">Velvet Flat White</h3>
           <p class="menu-item-desc">Double ristretto poured over silky microfoam. Strong, smooth, and sophisticated.</p>
-          <button class="menu-item-cta" data-item="Flat White">Order on WhatsApp →</button>
+          <button class="menu-item-cta" data-item="Flat White"> Add order +</button>
         </div>
       </article>
 
@@ -226,7 +228,7 @@
           </div>
           <h3 class="menu-item-title">Dark Choco Mocha</h3>
           <p class="menu-item-desc">Belgian dark chocolate melted into espresso and creamy milk. A cozy hug in a cup.</p>
-          <button class="menu-item-cta" data-item="Mocha">Order on WhatsApp →</button>
+          <button class="menu-item-cta" data-item="Mocha"> Add order +</button>
         </div>
       </article>
     </div>
@@ -242,7 +244,7 @@
           </div>
           <h3 class="menu-item-title">Vanilla Iced Latte</h3>
           <p class="menu-item-desc">Chilled espresso over ice with organic milk and a hint of Madagascar vanilla syrup.</p>
-          <button class="menu-item-cta" data-item="Iced Vanilla Latte">Order on WhatsApp →</button>
+          <button class="menu-item-cta" data-item="Iced Vanilla Latte"> Add order +</button>
         </div>
       </article>
 
@@ -254,7 +256,7 @@
           </div>
           <h3 class="menu-item-title">Nitro Cold Brew</h3>
           <p class="menu-item-desc">Steeped for 18 hours. Ultra-smooth, low acidity, and naturally sweet.</p>
-          <button class="menu-item-cta" data-item="Nitro Cold Brew">Order on WhatsApp →</button>
+          <button class="menu-item-cta" data-item="Nitro Cold Brew"> Add order +</button>
         </div>
       </article>
 
@@ -266,7 +268,7 @@
           </div>
           <h3 class="menu-item-title">Classic Affogato</h3>
           <p class="menu-item-desc">A scoop of artisan vanilla gelato "drowned" in a double shot of hot espresso.</p>
-          <button class="menu-item-cta" data-item="Affogato">Order on WhatsApp →</button>
+          <button class="menu-item-cta" data-item="Affogato"> Add order +</button>
         </div>
       </article>
     </div>
@@ -282,7 +284,7 @@
           </div>
           <h3 class="menu-item-title">Butter Croissant</h3>
           <p class="menu-item-desc">French-style, flaky, and golden. Baked fresh every morning at 7 AM.</p>
-          <button class="menu-item-cta" data-item="Butter Croissant">Order on WhatsApp →</button>
+          <button class="menu-item-cta" data-item="Butter Croissant"> Add order +</button>
         </div>
       </article>
 
@@ -294,7 +296,7 @@
           </div>
           <h3 class="menu-item-title">Sourdough Cinnamon Roll</h3>
           <p class="menu-item-desc">Soft, gooey, and glazed with cream cheese frosting. A local favorite.</p>
-          <button class="menu-item-cta" data-item="Cinnamon Roll">Order on WhatsApp →</button>
+          <button class="menu-item-cta" data-item="Cinnamon Roll"> Add order +</button>
         </div>
       </article>
 
@@ -306,7 +308,7 @@
           </div>
           <h3 class="menu-item-title">Avocado Toast</h3>
           <p class="menu-item-desc">Rustic sourdough bread, smashed avocado, chili flakes, and microgreens.</p>
-          <button class="menu-item-cta" data-item="Avocado Toast">Order on WhatsApp →</button>
+          <button class="menu-item-cta" data-item="Avocado Toast"> Add order +</button>
         </div>
       </article>
     </div>
@@ -472,12 +474,16 @@
   </main>
 
   <!-- Floating WhatsApp button always visible at bottom-right.-->
-  <a
-  href="https://wa.me/50688403178"
-  class="whatsapp-float"
-  target="_blank"
-  aria-label="Chat with us on WhatsApp"
->
+
+  <div id="clear-cart-btn" class="clear-cart-btn" role="button" aria-label="Vaciar pedido" style="display: none;">
+  🗑️
+</div>
+ <div class="whatsapp-float" id="cart-btn" role="button" aria-label="Ver mi pedido">
+  <span class="wa-icon">💬</span>
+  <span class="wa-text">Complete order</span>
+  <span class="cart-count" id="cart-count">0</span>
+</div>
+
   <span class="wa-icon">💬</span>
   <span class="wa-text">Chat with us</span>
 </a>
